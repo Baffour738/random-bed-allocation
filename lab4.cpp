@@ -1,16 +1,13 @@
-
 #include <iostream>
 #include <ctime>
 #include <algorithm>
 using namespace std;
-
 int main() {
     cout << "*********Random Bed Allocation*********" << endl;
     while (true) {
         string student_id;
         cout << "Enter your student ID (8 digits): ";
         cin >> student_id;
-        
         if (student_id.length() == 8 && all_of(student_id.begin(), student_id.end(), ::isdigit)) {
             cout << student_id << " has been assigned to ";
             srand(time(0));
@@ -27,6 +24,5 @@ int main() {
             cout << "Invalid student ID. Please enter an 8-digit number." << endl;
         }
     }
-    
     return 0;
 }
